@@ -5,6 +5,10 @@
     <title>HW4 - Percoski,Eric</title>
 
     <style>
+        div{
+            float: left;
+            display: inline-block;
+        }
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
@@ -21,29 +25,30 @@
             background-color: #dddddd;
         }
     </style>
+        <h2 style="float: left; padding-left: 40%">Countries API</h2>
+
 </head>
+<div>
+    <div>
 <body>
-
-<h2 style="float: left; padding-left: 40%">Countries API</h2>
-<form method ="post" action="/>save">
-    <label title="Test">
+    <div>
+<form method ="post" action="/push">
+    <div>
         <textarea rows="5" cols="10" name="name">${name}</textarea>
-    </label>
-    <label>
-        <textarea rows="5" cols="10" name="capital">${capital}</textarea>
-    </label>
-    <label>
+        <div>
+            <textarea rows="5" cols="10" name="capital">${capital}</textarea>
+        </div>
+    </div>
+
         <textarea rows="5" cols="10" name="region">${region}</textarea>
-    </label>
-    <label>
         <textarea rows="5" cols="10" name="subregion">${subregion}</textarea>
-    </label>
-    <label>
         <textarea rows="5" cols="10" name="population">${population}</textarea>
-    </label>
+
+    <button type="submit" style="height: 35px; width: 100px;">SUBMIT AND LOAD DB</button>
 </form>
-
-
+    </div>
+</body>
+    </div>
 <table>
     <tr>
         <th>Country Name</th>
@@ -51,17 +56,19 @@
         <th>Region</th>
         <th>Sub-Region</th>
         <th>Population</th>
+        <th>Actions</th>
+
 
     </tr>
     <c:forEach var="itemList" items="${itemList}">
         <tr>
-            <td>${listitem.name}</td>
-            <td>${listitem.description}</td>
-            <td>${listitem.symptoms}</td>
-            <td>${listitem.duration} days</td>
-            <td>${listitem.mortal}%</td>
+            <td>${itemList.name}</td>
+            <td>${itemList.capital}</td>
+            <td>${itemList.region}</td>
+            <td>${itemList.subregion}</td>
+            <td>${itemList.population}</td>
             <td>
-                <img src="${listitem.image}" width="200" height="150"/>
+                <a href="/delete/${itemList.id}">DELETE</a>
             </td>
 
 
@@ -69,6 +76,5 @@
         </tr>
     </c:forEach>
 </table>
-
-</body>
+</div>
 </html>

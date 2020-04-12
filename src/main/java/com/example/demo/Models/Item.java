@@ -65,7 +65,7 @@ public class Item {
         this.region = region;
     }
 
-    public String getSubRegion() {
+    public String getSubregion() {
         return subregion;
     }
 
