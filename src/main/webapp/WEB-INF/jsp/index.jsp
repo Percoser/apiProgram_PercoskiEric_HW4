@@ -33,13 +33,8 @@
 <body>
     <div>
 <form method ="post" action="/push">
-    <div>
         <textarea rows="5" cols="10" name="name">${name}</textarea>
-        <div>
-            <textarea rows="5" cols="10" name="capital">${capital}</textarea>
-        </div>
-    </div>
-
+        <textarea rows="5" cols="10" name="capital">${capital}</textarea>
         <textarea rows="5" cols="10" name="region">${region}</textarea>
         <textarea rows="5" cols="10" name="subregion">${subregion}</textarea>
         <textarea rows="5" cols="10" name="population">${population}</textarea>
